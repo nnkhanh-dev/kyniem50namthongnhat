@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section{
+    height: 100vh;
+    width: 100%;
+  }
+
+  .first-section {
+    position: relative;
+    background-image: url('./assets/images/xetang.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8rem;
+    overflow: hidden;
+  }
+  
+  .first-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(207, 16, 32, 0.9), rgba(207, 16, 32, 0));
+    z-index: 1;
+  }
+  
+  .content-box {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    color: white;
+    font-size: 30px;
+  }
+  
+  .content-box h1 {
+    font-size: 50px;
+    margin-bottom: 16px;
+    animation-iteration-count: infinite;
+  } 
+  
+  .content-box button {
+    font-size: 20px;
+    margin-top: 32px;
+  }
+
+  .red-section {
+    color: white;
+    background-color: rgb(103,1,1);
+  } 
+
+  .blue-section {
+    color: white;
+    background-color: rgb(3, 32, 128);
+  } 
+
+
+  .dark-section {
+    color: white;
+    background-color: black;
+  }
+
+  .light-section {
+    color: black;
+    background-color: white;
+  }
+
+  .section-title{
+    text-align: center;
+    margin-bottom: 64px;
+    padding-top: 64px;
+  }
+
+  .section-subtitle{
+    text-align: center;
+    margin-top: 32px;
+    font-size: 25px;
+    font-style: italic;
+  }
+
+  .section-carousel {
+    width: 50%;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 1.75;
+    overflow: hidden;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: white;
+    text-align: left;
+    position: absolute;
+  }
+
+  .section-content{
+    width: 50%;
+  }
+
+  .special-section{
+    background-image: url('./assets/images/background-trongdong.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  .event-card{
+    width: 300px;
+    background-color: white;
+    margin: 16px;
+  }
+
+  .event-image{
+    width: 100%;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+  }
+
+  .event-image img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .event-content{
+    width: 100%;
+    padding: 16px;
+    color: black;
+  }
+
+  .event-content .card-title{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 16px;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .event-content svg {
+    width: 16px;
+    margin-right: 10px;
+  }
+
+  .event-card button {
+    background-color: black;
+    padding: 6px;
+    color: white;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .video-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+
+
+  .video-wrapper iframe{
+    width: 800px;
+    height: 400px;
+  }
+
+  footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 32px 0px;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100vh;
+    background-color: rgb(103, 1, 1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 999;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .icon {
+    width: 40px;
+    height: auto;
+  }
+
+  .icon-text{
+    display: none;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  nav .list-section {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-weight: bold;
+  }
+  
+  nav .list-section li {
+    margin: 10px 0;
+  }
+  
+  nav .list-section li a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  
+  /* Khi hover vào nav thì mở rộng và hiển thị danh sách */
+  nav:hover {
+    width: 200px;
+  }
+  
+  nav:hover .list-section {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+  }
+  
+  nav:hover .icon-text {
+    display: block;
+  }
