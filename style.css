@@ -13,6 +13,13 @@
     width: 100%;
   }
 
+  @media (max-width: 1000px){
+    section{
+      height: 100%;
+      padding-bottom: 32px;
+    }
+  }
+
   .first-section {
     position: relative;
     background-image: url('./assets/images/xetang.jpg'); 
@@ -24,6 +31,12 @@
     overflow: hidden;
   }
   
+  @media (max-width: 1000px) {
+    .first-section{
+      height: 100vh;
+    }
+  }
+
   .first-section::before {
     content: '';
     position: absolute;
@@ -49,9 +62,34 @@
     animation-iteration-count: infinite;
   } 
   
-  .content-box button {
+  @media (max-width: 1000px) {
+    .content-box h1 {
+      font-size: 40px;
+    }
+  }
+
+  .content-box a {
     font-size: 20px;
     margin-top: 32px;
+  }
+
+  @media (max-width: 600px) {
+    .first-section{
+      padding: 0rem 4rem;
+    }
+    .content-box{
+      text-align: center;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    .content-box h1{
+      font-size: 30px;
+    }
+
+    .content-box a {
+      font-size: 14px;
+    }
   }
 
   .red-section {
@@ -78,7 +116,7 @@
   .section-title{
     text-align: center;
     margin-bottom: 64px;
-    padding-top: 64px;
+    padding: 64px 32px 0px 32px;
   }
 
   .section-subtitle{
@@ -86,10 +124,18 @@
     margin-top: 32px;
     font-size: 25px;
     font-style: italic;
+    padding: 0px 32px;
   }
 
   .section-carousel {
     width: 50%;
+    padding: 16px;
+  }
+
+  @media (max-width: 1000px) {
+    .section-carousel {
+      width: 100%;
+    }
   }
   
   .carousel-inner {
@@ -118,6 +164,17 @@
 
   .section-content{
     width: 50%;
+    padding: 16px;
+  }
+
+  @media (max-width: 1000px) {
+    .section-content{
+      width: 100%;
+    }
+  }
+
+  .section-content p {
+    text-align: justify;
   }
 
   .special-section{
@@ -130,7 +187,26 @@
   .event-card{
     width: 300px;
     background-color: white;
-    margin: 16px;
+    margin: 10px;
+  }
+
+  @media (max-width: 1000px){
+    .event-card{
+      width: 220px;
+      font-size: 13px;
+    }
+
+    .event-content .card-title{
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 700px){
+    .event-card{
+      width: 100%;
+      margin: 16px 0;
+      padding: 0;
+    }
   }
 
   .event-image{
@@ -245,17 +321,117 @@
     font-size: 14px;
   }
   
-  /* Khi hover vào nav thì mở rộng và hiển thị danh sách */
-  nav:hover {
-    width: 200px;
+  @media (min-width: 1000.1px) {
+    nav:hover {
+      width: 200px;
+    }
+    
+    nav:hover .list-section {
+      opacity: 1;
+      pointer-events: auto;
+      display: block;
+    }
+    
+    nav:hover .icon-text {
+      display: block;
+    }
+  
   }
   
-  nav:hover .list-section {
-    opacity: 1;
-    pointer-events: auto;
-    display: block;
+  @media (max-width: 1000px) {
+    nav {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+  
+    nav:hover {
+      width: 100%; /* không cần mở rộng khi hover trên mobile */
+    }
+  
+    nav .list-section {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      opacity: 1 !important;
+      pointer-events: auto;
+      margin: 0;
+    }
+  
+    nav .list-section li {
+      margin: 0;
+    }
+  
+    .icon-text {
+      display: block;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
   }
   
-  nav:hover .icon-text {
-    display: block;
+  /* Hiện toggle button trên màn hình nhỏ */
+  @media (max-width: 800px) {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-icon{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    nav .list-section {
+      display: none; /* ban đầu ẩn */
+      flex-direction: column;
+      gap: 0.5rem;
+      background-color: rgb(103, 1, 1);
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    nav .list-section.show {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    nav{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .section-body,  .section-bodyreverse{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 1000px) {
+    .section-body{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .section-bodyreverse{
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
