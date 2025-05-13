@@ -18,7 +18,7 @@
       <div class="nav-icon">
         <div class="d-flex align-items-center">
           <img src="./assets/images/vietnamflag.png" alt="Cờ Việt Nam" class="icon">
-          <span class="icon-text">Việt Nam</span>
+          <span class="icon-text">VIỆT NAM</span>
         </div>
         <button class="nav-toggle" id="navToggle">☰</button>
       </div>
@@ -172,7 +172,7 @@
                   </svg>
                   6h-10h 30/04/2025
                 </div>
-                <button>Xem chi tiết</button>
+                <a href="https://vtv.vn/xa-hoi/chuoi-su-kien-nhan-dip-le-ky-niem-50-nam-ngay-giai-phong-mien-nam-thong-nhat-dat-nuoc-20250428211125864.htm" target="_blank"><button>Xem chi tiết</button></a>
               </div>
             </div>
 
@@ -195,7 +195,7 @@
                   </svg>
                   19h30-21h30 30/04/2025
                 </div>
-                <button>Xem chi tiết</button>
+                <a href="https://vtv.vn/xa-hoi/chuoi-su-kien-nhan-dip-le-ky-niem-50-nam-ngay-giai-phong-mien-nam-thong-nhat-dat-nuoc-20250428211125864.htm" target="_blank"><button>Xem chi tiết</button></a>
               </div>
             </div>
 
@@ -218,7 +218,7 @@
                   </svg>
                   19h-19h25 30/04/2025
                 </div>
-                <button>Xem chi tiết</button>
+                <a href="https://vtv.vn/xa-hoi/chuoi-su-kien-nhan-dip-le-ky-niem-50-nam-ngay-giai-phong-mien-nam-thong-nhat-dat-nuoc-20250428211125864.htm" target="_blank"><button>Xem chi tiết</button></a>
               </div>
             </div>
 
@@ -241,7 +241,7 @@
                   </svg>
                   21h-21h15 30/04/2025
                 </div>
-                <button>Xem chi tiết</button>
+                <a href="https://vtv.vn/xa-hoi/chuoi-su-kien-nhan-dip-le-ky-niem-50-nam-ngay-giai-phong-mien-nam-thong-nhat-dat-nuoc-20250428211125864.htm" target="_blank"><button>Xem chi tiết</button></a>
               </div>
             </div>
 
@@ -264,7 +264,7 @@
                   </svg>
                   20h30-20h45 01/05/2025
                 </div>
-                <button>Xem chi tiết</button>
+                <a href="https://vtv.vn/xa-hoi/chuoi-su-kien-nhan-dip-le-ky-niem-50-nam-ngay-giai-phong-mien-nam-thong-nhat-dat-nuoc-20250428211125864.htm" target="_blank"><button>Xem chi tiết</button></a>
               </div>
             </div>
 
@@ -279,90 +279,7 @@
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-      $(document).ready(function () {
-      function initOrDestroyCarousel() {
-        var $carousel = $(".owl-carousel");
-
-        // Nếu màn hình >= 700, thì khởi tạo carousel nếu chưa có
-        if ($(window).width() >= 700) {
-          if (!$carousel.hasClass("owl-loaded")) {
-            $carousel.addClass("keep-carousel"); // đánh dấu
-            $carousel.owlCarousel({
-              loop: true,
-              margin: 10,
-              nav: false,
-              dots: false,
-              autoplay: true,
-              autoplayTimeout: 1500,
-              responsive: {
-                700: { items: 3 },
-                1000: { items: 3 },
-                1300: { items: 4 }
-              }
-            });
-          }
-        } else {
-          // Nếu đã có carousel thì phá hủy
-          if ($carousel.hasClass("owl-loaded")) {
-            $carousel.trigger('destroy.owl.carousel');
-            $carousel.find('.owl-stage-outer').children().unwrap();
-            $carousel.find('.owl-stage').children().unwrap();
-            $carousel.find('.owl-item').children().unwrap();
-            $carousel.removeClass("owl-carousel owl-loaded owl-hidden keep-carousel");
-          } else {
-            // Nếu chưa khởi tạo thì xóa luôn class (phòng trường hợp gán từ HTML)
-            $carousel.removeClass("owl-carousel");
-          }
-        }
-      }
-
-      // GỌI NGAY khi load
-      initOrDestroyCarousel();
-
-      // GỌI lại khi resize
-      $(window).on('resize', function () {
-        initOrDestroyCarousel();
-      });
-    });
-
-
-      function startTypingEffect(text, elementId, typingSpeed = 100, deletingSpeed = 50, pauseTime = 1000) {
-        const element = document.getElementById(elementId);
-        let index = 0;
-        let isDeleting = false;
-
-        function type() {
-          if (!isDeleting) {
-            element.innerHTML = text.substring(0, index + 1);
-            index++;
-            if (index === text.length) {
-              isDeleting = true;
-              setTimeout(type, pauseTime);
-              return;
-            }
-          } else {
-            element.innerHTML = text.substring(0, index - 1);
-            index--;
-            if (index === 0) {
-              isDeleting = false;
-            }
-          }
-
-          setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
-        }
-
-        type();
-      }
-      startTypingEffect("1975 - 2025", "typing1");
-      startTypingEffect('"Tự do - Hòa bình không phải dễ... Có được bây giờ cố gắng mà giữ..."', "typing2");
-      const toggleBtn = document.getElementById('navToggle');
-      const navList = document.getElementById('navList');
-
-      toggleBtn.addEventListener('click', () => {
-        navList.classList.toggle('show');
-      });
-    </script>
+    <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
