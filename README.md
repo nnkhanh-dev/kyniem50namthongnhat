@@ -4,7 +4,7 @@ Chào mừng bạn đến với dự án website **Kỷ niệm 50 năm ngày đ�
 
 ## 🌐 Truy cập website
 
-👉 [Nhấn vào đây để xem website](https://khanhnewbiehehe.github.io/kyniem50namthongnhat/)
+👉 [Nhấn vào đây để xem website](https://nnkhanh-dev.github.io/kyniem50namthongnhat/)
 
 ## 📌 Nội dung chính
 
